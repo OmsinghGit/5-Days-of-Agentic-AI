@@ -18,7 +18,14 @@ Learn by building in public:
 - Learned Binary Search using reasoning capabilities
 - Understood Agentic AI vs Conversational AI
 
-### 🔜 Day 2: Python + NIM API Integration
+### ✅ Day 2: Python + NIM API Integration
+- Created a Python virtual environment
+- Installed and configured required dependencies
+- Integrated NVIDIA Nemotron using the OpenAI SDK
+- Managed API keys securely with `.env`
+- Made the first successful NVIDIA NIM API call
+- Received AI-generated responses in Python
+- Learned Git, `.gitignore`, and debugging best practices
 
 ### 🔜 Day 3: Building the Core AI Assistant
 
