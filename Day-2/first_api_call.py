@@ -4,7 +4,6 @@ from openai import OpenAI
 
 load_dotenv()
 
-print(os.getenv("NVIDIA_API_KEY"))
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
