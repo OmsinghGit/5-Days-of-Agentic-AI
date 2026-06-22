@@ -27,7 +27,12 @@ Learn by building in public:
 - Received AI-generated responses in Python
 - Learned Git, `.gitignore`, and debugging best practices
 
-### 🔜 Day 3: Building the Core AI Assistant
+### ✅ Day 3: AI Study Assistant
+- Built a modular AI Study Assistant
+- Integrated NVIDIA Nemotron API
+- Used environment variables for secure API management
+- Separated configuration, service layer, and main application logic
+- Learned reusable project architecture
 
 ### 🔜 Day 4: Adding Multimodal Features
 
