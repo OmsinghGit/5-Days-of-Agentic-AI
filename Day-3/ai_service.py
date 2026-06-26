@@ -1,4 +1,11 @@
+from openai import OpenAI
+from config import API_KEY
 from prompts import SYSTEM_PROMPT
+
+client = OpenAI(
+    base_url="https://integrate.api.nvidia.com/v1",
+    api_key=API_KEY
+)
 
 def ask_ai(question):
 
