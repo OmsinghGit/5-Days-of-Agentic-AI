@@ -22,5 +22,8 @@ def ask_ai(question):
             }
         ]
     )
+    
+
+    print(response.choices[0].message)
 
     return response.choices[0].message.content
