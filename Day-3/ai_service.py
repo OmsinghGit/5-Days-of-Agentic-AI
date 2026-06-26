@@ -1,6 +1,12 @@
 from openai import OpenAI
 from config import API_KEY
-from prompts import SYSTEM_PROMPT
+
+from prompts import (
+    GENERAL_PROMPT,
+    PROGRAMMING_PROMPT,
+    COMPARISON_PROMPT,
+    FACT_PROMPT
+)
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
@@ -22,7 +28,7 @@ def ask_ai(question):
             }
         ]
     )
-    
+
 
     print(response.choices[0].message)
 
