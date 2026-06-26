@@ -225,7 +225,9 @@ Version 2 of this project will include:
 # 📈 Project Status
 
 **Version:** v1.0
+
 **Status:** ✅ Completed
+
 Next Phase: **AI Study Mentor v2**
 
 ---
