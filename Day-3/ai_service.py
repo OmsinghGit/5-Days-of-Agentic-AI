@@ -1,4 +1,4 @@
-from openai import OpenAI
+from openai import OpenAI, OpenAIError
 from config import API_KEY
 
 from prompts import (
@@ -8,13 +8,20 @@ from prompts import (
     FACT_PROMPT
 )
 
-client = OpenAI(
-    base_url="https://integrate.api.nvidia.com/v1",
-    api_key=API_KEY
-)
+# Initialize client only if API_KEY is provided
+client = None
+if API_KEY:
+    client = OpenAI(
+        base_url="https://integrate.api.nvidia.com/v1",
+        api_key=API_KEY
+    )
 
 
 def ask_ai(question):
+    global client
+
+    if not API_KEY or not client:
+        return "Error: NVIDIA_API_KEY is missing or invalid. Please check your config.py and .env file configuration."
 
     question_lower = question.lower()
 
@@ -33,18 +40,27 @@ def ask_ai(question):
     else:
         selected_prompt = GENERAL_PROMPT + "\n" + PROGRAMMING_PROMPT
 
-    response = client.chat.completions.create(
-        model="nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-        messages=[
-            {
-                "role": "system",
-                "content": selected_prompt
-            },
-            {
-                "role": "user",
-                "content": question
-            }
-        ]
-    )
+    try:
+        response = client.chat.completions.create(
+            model="nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+            messages=[
+                {
+                    "role": "system",
+                    "content": selected_prompt
+                },
+                {
+                    "role": "user",
+                    "content": question
+                }
+            ]
+        )
 
-    return response.choices[0].message.content
+        if not response.choices:
+            return "Error: The AI returned an empty response."
+
+        return response.choices[0].message.content
+
+    except OpenAIError as e:
+        return f"API Error: Failed to communicate with NVIDIA NIM API. Details: {str(e)}"
+    except Exception as e:
+        return f"Unexpected Error: An error occurred while retrieving answer. Details: {str(e)}"
