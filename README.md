@@ -1,7 +1,6 @@
 # 🚀 5 Days of Agentic AI
 
 A 5-day hands-on journey of learning **Agentic AI**, **Prompt Engineering**, and **AI Application Development** using **Python**, **NVIDIA NIM**, and the **OpenAI SDK**.
-
 This repository documents my complete learning process—from making the first API call to building a modular AI Study Mentor with intelligent prompt routing.
 
 ---

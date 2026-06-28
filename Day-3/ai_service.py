@@ -63,4 +63,6 @@ def ask_ai(question):
     except OpenAIError as e:
         return f"API Error: Failed to communicate with NVIDIA NIM API. Details: {str(e)}"
     except Exception as e:
-        return f"Unexpected Error: An error occurred while retrieving answer. Details: {str(e)}"
+        return f"Unexpected Error: An error occurred while retrieving answer. Details: {str(e)}"
+
+
