@@ -99,8 +99,11 @@ This repository documents my learning - from making my first API call to buildin
 * Deployment
 
 ---
+
 ## 📌 Project Status
+
 **Version:** v1.0
+
 **Status:** ✅ Completed
 ---
 
