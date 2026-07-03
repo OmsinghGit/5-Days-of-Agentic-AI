@@ -1,8 +1,7 @@
 # 🚀 5 Days of Agentic AI
 
 A hands-on journey of building AI applications using **Python**, **NVIDIA NIM**, **OpenAI SDK**, and **Prompt Engineering**.
-
-This repository documents my learning—from making my first API call to building a modular **AI Study Mentor** with intelligent prompt routing and clean software architecture.
+This repository documents my learning - from making my first API call to building a modular **AI Study Mentor** with intelligent prompt routing and clean software architecture.
 
 ---
 
@@ -100,12 +99,9 @@ This repository documents my learning—from making my first API call to buildin
 * Deployment
 
 ---
-
 ## 📌 Project Status
-
 **Version:** v1.0
 **Status:** ✅ Completed
-
 ---
 
 ## ⭐ Support
