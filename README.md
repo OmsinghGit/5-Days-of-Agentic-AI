@@ -5,7 +5,7 @@ This repository documents my learning - from making my first API call to buildin
 
 ---
 
-## 🎯 Objective
+## Core(Objectives) 
 
 * Learn AI application development
 * Understand Prompt Engineering
